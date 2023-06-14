@@ -145,7 +145,7 @@ if __name__ == "__main__":
             if len(im.shape) == 3:
                 im = im[None]  
     mask = create_patch((imgsz,imgsz))
-    save_image_dir = "advimg"
+    save_image_dir = "adv_img"
     os.makedirs(save_image_dir,exist_ok=True)
     attack(opt, input_tensor=im, mask=mask.to(device), img_path=opt.source, save_image_dir=save_image_dir)
 
